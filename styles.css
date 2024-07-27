@@ -1,0 +1,130 @@
+/* - White: hsl(0, 0%, 100%)
+
+- Stone 100: hsl(30, 54%, 90%)
+- Stone 150: hsl(30, 18%, 87%)
+- Stone 600: hsl(30, 10%, 34%)
+- Stone 900: hsl(24, 5%, 18%)
+
+- Brown 800: hsl(14, 45%, 36%)
+
+- Rose 800: hsl(332, 51%, 32%)
+- Rose 50: hsl(330, 100%, 98%) 
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Outfit", sans-serif;
+    color: hsl(30, 10%, 34%);
+    background-color: hsl(30, 54%, 90%);
+
+    --heading-font: "Young Serif", serif;
+    --heading-font-color: hsl(24, 5%, 18%);
+    --hightlight-color: hsl(14, 45%, 36%);
+}
+
+
+ul, ol {
+    padding: 0 1.3rem;
+}
+ul li, ol li {
+    line-height: 2;
+    padding-left: 1em;
+}
+ol li::marker  {
+    font-weight: bold;
+}
+
+.ingredients:after, .instructions:after {
+    display: block;
+    content: " ";
+    border-bottom: 0.2px solid hsl(30, 18%, 87%);
+    margin: 1.5rem 0;
+}
+
+.container {
+    width: min(100%,735px);
+    margin: 0 auto;
+    letter-spacing: .5; 
+    background-color: hsl(0, 0%, 100%);
+}
+.header__img {
+    width: min(100%,655px);
+    display: block;
+    margin: 0 auto;
+}
+main {
+    margin: 0 auto;
+    width: 85%; 
+}
+
+.title {
+    color: var(--heading-font-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 2.125rem;
+}
+.subtitle {
+    font-family: var(--heading-font);
+    color: var(--hightlight-color);
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+
+.into {
+    line-height: 1.5;
+}
+
+.duration {
+    background-color: hsl(330, 100%, 98%);
+    padding: 0.3em 2em;
+    border-radius: .5em;
+}
+.duration h3 {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+    font-size: 2.3vh;
+  
+}
+.nutrition__table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.nutrition__table tr:not(tr:last-of-type) {
+    border-bottom: 1px solid hsl(30, 18%, 87%); 
+    line-height: 3;
+}
+
+.nutrition__table td:first-of-type{
+    padding-left: 3ch;
+}
+.nutrition__table td:last-of-type {
+    color:hsl(14, 45%, 36%);
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 700px) {
+    .container {
+        margin: 2rem auto;
+        padding: 2.5rem 0 ;
+        border-radius: 1.5rem;
+    }   
+    .header__img{
+        border-radius: .5rem;
+    }
+    main{
+        width: 655px;
+    }
+}
